@@ -1,6 +1,7 @@
-<h1>Dispositivos</h1>
-<hr>
+
 <div class="container">
+    <h1 class="text-center">Dispositivos</h1>
+    <hr>
     <table class="table table-bordered table-striped" style="top:40px;">
         <thead>
             <tr>
@@ -8,7 +9,7 @@
                 <th>IP</th>
                 <th>Tipo</th>
                 <th>Fabricante</th>
-                <th><a href="?controller=DispositivosController&method=criar" class="btn btn-success btn-sm">Novo</a></th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
                         <td>
                             <a href="?controller=DispositivosController&method=editar&id=<?php echo $dispositivo->id; ?>" class="btn btn-primary btn-sm">Editar</a>
                             <a href="?controller=DispositivosController&method=excluir&id=<?php echo $dispositivo->id; ?>" class="btn btn-danger btn-sm">Excluir</a>
+                            <a href="Ssh.php" class="btn btn-warning btn-sm">Logar</a>
                         </td>
                     </tr>
                     <?php
@@ -38,4 +40,7 @@
             ?>
         </tbody>
     </table>
+    <div class="text-center">
+        <a href="?controller=DispositivosController&method=criar" class="btn btn-success btn-sm">Novo</a>
+    </div>
 </div>
