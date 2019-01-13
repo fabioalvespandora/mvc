@@ -19,7 +19,7 @@ spl_autoload_register(function($class) {
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-        <a class="navbar-brand" href="#">MT4</a>
+        <a class="navbar-brand" href="index.php">MT4</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,7 +35,7 @@ spl_autoload_register(function($class) {
                 <a class="nav-link" href="?controller=CriptoController&method=index">Etapa 3 - Criptografia</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Etapa 4 - Hash</a>
+                <a class="nav-link" class="disabled">Etapa 4 - Hash</a>
             </li>
             </ul>
         </div>
