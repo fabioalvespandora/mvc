@@ -31,8 +31,10 @@
                 return true;
             }
         }
-        public function comando($comando){
-            $stream = ssh2_shell($connection);
+        public function comando($ip, $user, $pass, $comando){
+            $conn = ssh2_connect("$ip", 22);
+            ssh2_auth_password($conn, "$user", "$pass");
+            $stream = ssh2_shell($conn);
 
             fwrite($stream, $comando. PHP_EOL);
             sleep(10);
@@ -40,8 +42,9 @@
             while($buf = stream_get_contents($stream)){
                 $data.=$buf;
             }
-            echo $data;
             fclose($stream);
+            echo $data;
+            
         }
     }
 /*
