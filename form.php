@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="etapa3">
     <form action="?controller=DispositivosController&<?php echo isset($dispositivo->id) ? "method=atualizar&id={$dispositivo->id}" : "method=salvar"; ?>" method="post" >
         <div class="card" style="top:40px">
             <div class="card-header">
@@ -33,7 +33,7 @@
             <div class="card-footer">
                 <input type="hidden" name="id" id="id" value="<?php echo isset($dispositivo->id) ? $dispositivo->id : null; ?>" />
                 <button class="btn btn-success" type="submit">Salvar</button>
-                <button class="btn btn-secondary">Limpar</button>
+                <button class="btn btn-secondary" type="reset">Limpar</button>
                 <a class="btn btn-danger" href="?controller=DispositivosController&method=listar">Cancelar</a>
             </div>
         </div>

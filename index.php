@@ -51,7 +51,7 @@ spl_autoload_register(function($class) {
                 <a class="nav-link disabled" href="#">Etapa 2 - SSH</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Etapa 3 - Criptografia</a>
+                <a class="nav-link" href="?controller=CriptoController&method=index">Etapa 3 - Criptografia</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Etapa 4 - Hash</a>
@@ -73,6 +73,7 @@ spl_autoload_register(function($class) {
         }
         ?>
 
-
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/theme.js"></script>
     </body>
 </html>

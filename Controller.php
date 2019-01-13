@@ -1,8 +1,8 @@
 <?php 
 	class Controller{
 
-	    public $request;
-	 
+		public $request;
+			 
 	    public function __construct(){
 	        $this->request = new Request;
 	    }

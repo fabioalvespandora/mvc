@@ -81,18 +81,7 @@
 	            return $result;
 	        }
 	        return false;
-    	}
-
-
-    	//Numero de dispositivos cadastrados
-    	public static function count(){
-	        $conexao = Conexao::getInstance();
-	        $count   = $conexao->exec("SELECT count(*) FROM dispositivos;");
-	        if ($count) {
-	            return (int) $count;
-	        }
-	        return false;
-    	}
+		}
 
 
     	//Encontrar pelo ID

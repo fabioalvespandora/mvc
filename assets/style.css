@@ -2,3 +2,11 @@
     width: 100%;
     justify-content: center;
 }
+#etapa3{
+    justify-content: center;
+    text-align: center;
+}
+#etapa3 form{
+    padding: 50px 250px;
+    width: 100%;
+}
