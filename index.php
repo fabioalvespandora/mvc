@@ -17,26 +17,7 @@ spl_autoload_register(function($class) {
         <link href="assets/style.css" rel="stylesheet"/>
     </header>
     <body>
-
-        <?php
-        if ($_GET) {
-            $controller = isset($_GET['controller']) ? ((class_exists($_GET['controller'])) ? new $_GET['controller'] : NULL ) : null;
-            $method     = isset($_GET['method']) ? $_GET['method'] : null;
-            if ($controller && $method) {
-                if (method_exists($controller, $method)) {
-                    $parameters = $_GET;
-                    unset($parameters['controller']);
-                    unset($parameters['method']);
-                    call_user_func(array($controller, $method), $parameters);
-                } else {
-                    echo "Método não encontrado!";
-                }
-            } else {
-                echo "Controller não encontrado!";
-            }
-        } else {?>
-        
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
         <a class="navbar-brand" href="#">MT4</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +41,24 @@ spl_autoload_register(function($class) {
         </div>
         </div>
         </nav>
-        
+
+        <?php
+        if ($_GET) {
+            $controller = isset($_GET['controller']) ? ((class_exists($_GET['controller'])) ? new $_GET['controller'] : NULL ) : null;
+            $method     = isset($_GET['method']) ? $_GET['method'] : null;
+            if ($controller && $method) {
+                if (method_exists($controller, $method)) {
+                    $parameters = $_GET;
+                    unset($parameters['controller']);
+                    unset($parameters['method']);
+                    call_user_func(array($controller, $method), $parameters);
+                } else {
+                    echo "Método não encontrado!";
+                }
+            } else {
+                echo "Controller não encontrado!";
+            }
+        } else {?>
 
 
 
@@ -72,7 +70,7 @@ spl_autoload_register(function($class) {
         <?php 
         }
         ?>
-
+        
     <script src="assets/jquery.min.js"></script>
     <script src="assets/theme.js"></script>
     </body>

@@ -10,3 +10,16 @@
     padding: 50px 250px;
     width: 100%;
 }
+.etapa3btns{
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.content-hidden{
+    display: none;
+}
+#etapa3final{
+    padding: 50px 250px;
+    width: 100%;
+    text-align: center;
+}
