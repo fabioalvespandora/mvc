@@ -4,7 +4,7 @@ class DispositivosController extends Controller
  
     
     public function listar(){
-        $dispositivos = dispositivo::all();
+        $dispositivos = Dispositivo::all();
         return $this->view('grade', ['dispositivos' => $dispositivos]);
     }
  
@@ -15,14 +15,14 @@ class DispositivosController extends Controller
     
     public function editar($dados){
         $id      = (int) $dados['id'];
-        $dispositivo = dispositivo::find($id);
+        $dispositivo = Dispositivo::find($id);
  
         return $this->view('form', ['dispositivo' => $dispositivo]);
     }
  
 
     public function salvar(){
-        $dispositivo             = new dispositivo;
+        $dispositivo             = new Dispositivo;
         $dispositivo->hostname   = $this->request->hostname;
         $dispositivo->ip         = $this->request->ip;
         $dispositivo->tipo       = $this->request->tipo;
@@ -34,7 +34,7 @@ class DispositivosController extends Controller
  
     public function atualizar($dados){
         $id                      = (int) $dados['id'];
-        $dispositivo             = dispositivo::find($id);
+        $dispositivo             = Dispositivo::find($id);
         $dispositivo->hostname   = $this->request->hostname;
         $dispositivo->ip         = $this->request->ip;
         $dispositivo->tipo       = $this->request->tipo;
@@ -47,7 +47,7 @@ class DispositivosController extends Controller
 
     public function excluir($dados){
         $id      = (int) $dados['id'];
-        $dispositivo = dispositivo::destroy($id);
+        $dispositivo = Dispositivo::destroy($id);
         return $this->listar();
     }
 }
