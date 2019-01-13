@@ -29,7 +29,7 @@ spl_autoload_register(function($class) {
                 <a class="nav-link" href="?controller=DispositivosController&method=listar">Etapa 1 - CRUD</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Etapa 2 - SSH</a>
+                <a class="nav-link" href="?controller=DispositivosController&method=listar">Etapa 2 - SSH</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="?controller=CriptoController&method=index">Etapa 3 - Criptografia</a>

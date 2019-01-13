@@ -25,7 +25,7 @@
                         <td>
                             <a href="?controller=DispositivosController&method=editar&id=<?php echo $dispositivo->id; ?>" class="btn btn-primary btn-sm">Editar</a>
                             <a href="?controller=DispositivosController&method=excluir&id=<?php echo $dispositivo->id; ?>" class="btn btn-danger btn-sm">Excluir</a>
-                            <a href="" class="btn btn-warning btn-sm disabled">Logar</a>
+                            <a href="?controller=SshController&method=index&ip=<?= $dispositivo->ip; ?>" class="btn btn-warning btn-sm">Logar</a>
                         </td>
                     </tr>
                     <?php
