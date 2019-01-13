@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', true);
+error_reporting(0);
+ini_set('display_errors', false);
 spl_autoload_register(function($class) {
     if (file_exists("$class.php")) {
         require_once "$class.php";

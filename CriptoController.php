@@ -16,7 +16,11 @@ class CriptoController extends Controller{
         $aes = new Aes;
         $criptografadoAes = $aes->criptografia($texto);
         $aes->cripto = $criptografadoAes;
-        return $this->view('etapa3final', ['cesar' => $cesar,'aes' => $aes]);
+
+        $base = new Base64;
+        $criptografadoBase = $base->criptografar($texto);
+        $base->cripto = $criptografadoBase;
+        return $this->view('etapa3final', ['cesar' => $cesar,'aes' => $aes, 'base' => $base]);
         }else{
             echo "<script>alert('erro')</script>";
         }
@@ -33,8 +37,10 @@ class CriptoController extends Controller{
         $criptografadoAes = $aes->descriptografia($texto);
         $aes->cripto = $criptografadoAes;
 
-
-        return $this->view('etapa3final', ['cesar' => $cesar, 'aes' => $aes]);
+        $base = new Base64;
+        $criptografadoBase = $base->descriptografar($texto);
+        $base->cripto = $criptografadoBase;
+        return $this->view('etapa3final', ['cesar' => $cesar, 'aes' => $aes, 'base' => $base]);
         }else{
             echo "<script>alert('erro')</script>";
         }

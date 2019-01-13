@@ -14,15 +14,15 @@
             </div>
             <div class="form-group form-row">
                 <label class="col-sm-2 col-form-label text-right">Cifra de Cesar:</label>
-                <input type="text" class="form-control col-sm-8" name="cripto" id="cripto" value="<?= $cesar->cripto ?>" />
+                <input type="text" class="form-control col-sm-8" value="<?= $cesar->cripto ?>" />
             </div>
             <div class="form-group form-row">
                 <label class="col-sm-2 col-form-label text-right">AES256:</label>
-                <input type="text" class="form-control col-sm-8" name="cripto" id="cripto" value="<?= $aes->cripto ?>" />
+                <input type="text" class="form-control col-sm-8" value="<?= $aes->cripto ?>" />
             </div>
             <div class="form-group form-row">
-                <label class="col-sm-2 col-form-label text-right">Cripto3:</label>
-                <input type="text" class="form-control col-sm-8" name="cripto" id="cripto" value="<?= $cesar->cripto ?>" />
+                <label class="col-sm-2 col-form-label text-right">Base64:</label>
+                <input type="text" class="form-control col-sm-8" value="<?= $base->cripto ?>" />
             </div>
             <div class="card-footer">
                 <button class="btn btn-secondary" type="reset">Limpar</button>
