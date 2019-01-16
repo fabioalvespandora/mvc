@@ -8,7 +8,7 @@
     public static function getInstance()
     {
         if (is_null(self::$conexao)) {
-            self::$conexao = new \PDO('mysql:host=localhost;port=3306;dbname=fbnmvc', 'root', 'devmaster');
+            self::$conexao = new \PDO('mysql:host=localhost;port=3306;dbname=fbnmvc', 'usuariomt4', 'mt4');
             self::$conexao->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             self::$conexao->exec('set names utf8');
         }

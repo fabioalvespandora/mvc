@@ -32,9 +32,7 @@
                 }
             } else {
                 ?>
-                <tr>
-                    <td colspan="5">Nenhum registro encontrado</td>
-                </tr>
+                <script>alert("opora");</script>
                 <?php
             }
             ?>
